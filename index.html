@@ -1,0 +1,1806 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="Mustak Painters offers premium interior and exterior painting, decorative wall textures, wall panels and wallpaper solutions. Contact us for your painting project.">
+  <title>Mustak Painters | Colours That Define Your Space</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffefa;
+      --ink: #22231e;
+      --muted: #77776d;
+      --dark: #171714;
+      --gold: #c3a66b;
+      --line: #e5e0d5;
+      --green: #247a51;
+      --radius: 18px;
+      --container: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "DM Sans", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    section { scroll-margin-top: 85px; }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .serif { font-family: "Playfair Display", Georgia, serif; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #8d7547;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 25px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-heading {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 4.5vw, 54px);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -1.3px;
+      margin: 14px 0 18px;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      max-width: 560px;
+      font-size: 15px;
+    }
+
+    .section-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background .25s, color .25s, transform .25s, border-color .25s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-dark { background: var(--dark); color: white; }
+    .btn-dark:hover { background: #35352e; }
+
+    .btn-light {
+      background: transparent;
+      border-color: rgba(255,255,255,.6);
+      color: white;
+    }
+
+    .btn-light:hover { background: white; color: var(--dark); }
+
+    .btn-gold { background: var(--gold); color: #201d16; }
+    .btn-gold:hover { background: #d4ba85; }
+
+    .btn-outline { border-color: var(--line); background: transparent; }
+    .btn-outline:hover { border-color: var(--gold); }
+
+    /* Announcement strip */
+    .top-strip {
+      background: var(--dark);
+      color: #e9e4d8;
+      font-size: 11px;
+      letter-spacing: .8px;
+      padding: 9px 0;
+    }
+
+    .top-strip-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-strip a { color: #d6bd88; }
+
+    /* Navigation */
+    .header {
+      background: rgba(255,254,250,.96);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      display: flex;
+      min-height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold);
+      color: #9c7c42;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 23px;
+    }
+
+    .brand-text { display: grid; line-height: 1.2; }
+    .brand-name { font-size: 15px; font-weight: 700; letter-spacing: 1.5px; }
+    .brand-sub { font-size: 9px; letter-spacing: 2.5px; color: var(--muted); margin-top: 5px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      color: #55554e;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: #9c7c42; }
+
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .nav-actions .btn { min-height: 44px; padding: 10px 16px; }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      width: 46px;
+      height: 46px;
+      border-radius: 4px;
+      font-size: 22px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background: #292820;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image: url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=85");
+      background-size: cover;
+      background-position: center 55%;
+      transform: scale(1.015);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(20,20,17,.89) 0%, rgba(20,20,17,.70) 45%, rgba(20,20,17,.18) 100%),
+        linear-gradient(0deg, rgba(20,20,17,.36), transparent 45%);
+    }
+
+    .hero-content {
+      width: min(780px, 100%);
+      padding: 100px 0 120px;
+    }
+
+    .hero .eyebrow { color: #e2c995; }
+
+    .hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(46px, 7vw, 84px);
+      font-weight: 400;
+      line-height: 1.04;
+      letter-spacing: -2.2px;
+      margin: 24px 0;
+    }
+
+    .hero h1 em { color: #e2c995; font-weight: 400; }
+
+    .hero-description {
+      max-width: 510px;
+      color: #e3e0d7;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 58px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.25);
+    }
+
+    .proof-item strong {
+      display: block;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #e5cb95;
+    }
+
+    .proof-item span { color: #e0ddd5; font-size: 11px; }
+
+    /* Intro bar */
+    .trust-bar {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .trust-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 25px 15px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:last-child { border: 0; }
+
+    .trust-item strong {
+      display: block;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .trust-item span { color: var(--muted); font-size: 11px; }
+
+    /* About */
+    .about { padding: 110px 0; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .about-visual { position: relative; padding: 0 28px 28px 0; }
+
+    .about-visual > img {
+      width: 100%;
+      height: 510px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .about-note {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: min(230px, 70%);
+      padding: 24px;
+      background: var(--dark);
+      color: white;
+      border: 1px solid #bba16d;
+    }
+
+    .about-note strong {
+      display: block;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .about-note span { color: #d4cdbd; font-size: 11px; }
+
+    .about-copy .section-heading { max-width: 530px; }
+    .about-copy > p { color: var(--muted); font-size: 14px; margin-bottom: 17px; }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+      margin: 27px 0 30px;
+    }
+
+    .check-list li { display: flex; gap: 12px; font-size: 13px; align-items: flex-start; }
+
+    .check {
+      width: 21px;
+      height: 21px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold);
+      color: #8f723e;
+      border-radius: 50%;
+      font-size: 11px;
+    }
+
+    /* Services */
+    .services { padding: 100px 0; background: #eeece4; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--paper);
+      border: 1px solid #e7e2d7;
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(30,27,19,.08);
+    }
+
+    .service-image { height: 250px; overflow: hidden; background: #ddd8cd; }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .service-card:hover img { transform: scale(1.045); }
+
+    .service-content { padding: 25px 24px 28px; }
+
+    .service-number {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #9a804e;
+      font-weight: 700;
+    }
+
+    .service-content h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      font-size: 25px;
+      margin: 7px 0 10px;
+    }
+
+    .service-content p { color: var(--muted); font-size: 12px; }
+
+    .text-link {
+      display: inline-flex;
+      gap: 9px;
+      align-items: center;
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .text-link span { color: #987844; font-size: 18px; }
+
+    /* Process strip */
+    .promise {
+      padding: 75px 0;
+      background: var(--dark);
+      color: white;
+    }
+
+    .promise-grid {
+      display: grid;
+      grid-template-columns: 1.3fr repeat(3, 1fr);
+      align-items: center;
+      gap: 35px;
+    }
+
+    .promise-intro h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-top: 12px;
+    }
+
+    .promise-intro p { color: #c2c0b7; font-size: 12px; margin-top: 12px; }
+
+    .promise-card { border-left: 1px solid #44443a; padding-left: 22px; }
+
+    .promise-card .symbol {
+      color: #d4b77c;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 30px;
+    }
+
+    .promise-card h3 { font-size: 13px; margin: 9px 0; }
+    .promise-card p { color: #bcbab1; font-size: 11px; }
+
+    /* Portfolio */
+    .portfolio { padding: 105px 0; }
+
+    .portfolio-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+
+    .filter-btn {
+      min-height: 43px;
+      padding: 10px 17px;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      font-size: 11px;
+      color: #66665d;
+      transition: .2s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--dark);
+      color: white;
+      border-color: var(--dark);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      background: #d9d3c7;
+      cursor: pointer;
+      border: 0;
+      text-align: left;
+      color: white;
+      padding: 0;
+    }
+
+    .gallery-item[hidden] { display: none; }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .55s;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 35% 0 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.76));
+    }
+
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 12px;
+      z-index: 1;
+    }
+
+    .gallery-caption small {
+      display: block;
+      color: #e1c994;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 5px;
+    }
+
+    .gallery-caption strong {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 400;
+      font-size: 23px;
+    }
+
+    .gallery-note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* Paint finishes */
+    .finishes { padding: 90px 0; background: #e9e5da; }
+
+    .finish-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 13px;
+    }
+
+    .finish-card { min-width: 0; }
+
+    .finish-swatch {
+      width: 100%;
+      aspect-ratio: 1 / 1.12;
+      object-fit: cover;
+      background: #d6d0c3;
+      margin-bottom: 12px;
+    }
+
+    .finish-card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .finish-card p { color: var(--muted); font-size: 11px; margin-top: 4px; }
+
+    /* Reviews */
+    .reviews { padding: 105px 0; background: var(--paper); }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: #fffefa;
+    }
+
+    .stars { color: #ac8a4c; letter-spacing: 3px; font-size: 14px; }
+
+    .review-card blockquote {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 20px;
+      line-height: 1.55;
+      margin: 17px 0 24px;
+    }
+
+    .review-author { display: flex; align-items: center; gap: 12px; }
+
+    .review-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #e8e0ce;
+      color: #755d36;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .review-author strong { display: block; font-size: 12px; }
+    .review-author span { color: var(--muted); font-size: 10px; }
+
+    .review-disclaimer { color: var(--muted); font-size: 11px; margin-top: 22px; }
+
+    /* CTA */
+    .cta { padding: 20px 0 100px; background: var(--paper); }
+
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 70px 55px;
+      background: var(--dark);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta-panel::after {
+      content: "M";
+      position: absolute;
+      right: 23%;
+      top: -150px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 420px;
+      line-height: 1;
+      color: rgba(255,255,255,.035);
+      pointer-events: none;
+    }
+
+    .cta-copy { position: relative; z-index: 1; max-width: 620px; }
+
+    .cta-copy h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 4vw, 49px);
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 14px 0;
+    }
+
+    .cta-copy p { color: #c7c5bb; font-size: 13px; }
+
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; position: relative; z-index: 1; }
+
+    /* Contact */
+    .contact { padding: 0 0 105px; background: var(--paper); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact-details { margin-top: 30px; display: grid; gap: 22px; }
+
+    .contact-row { display: flex; gap: 14px; align-items: flex-start; }
+
+    .contact-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      background: #efebdf;
+      color: #8e7549;
+      flex-shrink: 0;
+      font-size: 17px;
+    }
+
+    .contact-row strong { display: block; font-size: 13px; margin-bottom: 3px; }
+    .contact-row p, .contact-row a { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .contact-row a:hover { color: #967844; }
+
+    .contact-form {
+      padding: 32px;
+      border: 1px solid var(--line);
+      background: #fbfaf5;
+    }
+
+    .contact-form h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+
+    .contact-form > p { color: var(--muted); font-size: 12px; margin-bottom: 25px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+
+    .field { display: grid; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+
+    .field label { font-size: 11px; font-weight: 700; }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      min-width: 0;
+      padding: 13px 12px;
+      min-height: 48px;
+      border: 1px solid #ded9cd;
+      background: white;
+      color: var(--ink);
+      border-radius: 2px;
+      outline: none;
+      font-size: 13px;
+    }
+
+    .field textarea { min-height: 110px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #ad925e; }
+
+    .contact-form .btn { width: 100%; margin-top: 20px; }
+
+    .form-note { font-size: 10px; color: var(--muted); margin-top: 12px; }
+
+    /* FAQ */
+    .faq { padding: 90px 0; background: #eeece4; }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .faq-list { border-top: 1px solid #d9d4c7; }
+
+    .faq-item { border-bottom: 1px solid #d9d4c7; }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+      min-height: 64px;
+      background: transparent;
+      border: 0;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .faq-question span:last-child {
+      font-size: 21px;
+      font-weight: 400;
+      color: #9c804c;
+      transition: transform .2s;
+    }
+
+    .faq-answer { display: none; color: var(--muted); font-size: 12px; padding: 0 24px 20px 0; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-question span:last-child { transform: rotate(45deg); }
+
+    /* Footer */
+    .footer { background: var(--dark); color: white; padding: 65px 0 22px; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+    }
+
+    .footer .brand-name { color: white; }
+    .footer .brand-sub { color: #b8b6aa; }
+    .footer .brand-mark { color: #d5b97f; }
+
+    .footer-about p { color: #b9b8af; font-size: 12px; margin-top: 20px; max-width: 290px; }
+
+    .footer h3 { font-size: 12px; letter-spacing: .7px; margin-bottom: 20px; }
+
+    .footer-links { display: grid; gap: 12px; list-style: none; }
+    .footer-links a { color: #c4c2b9; font-size: 12px; }
+    .footer-links a:hover { color: #dfc68f; }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding-top: 20px;
+      border-top: 1px solid #393931;
+      color: #a9a89e;
+      font-size: 10px;
+    }
+
+    .footer-bottom a { color: #ddc48d; }
+
+    /* Floating contact buttons */
+    .floating-actions {
+      position: fixed;
+      right: 18px;
+      bottom: 22px;
+      z-index: 150;
+      display: grid;
+      gap: 10px;
+    }
+
+    .fab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 49px;
+      padding: 0 16px;
+      border-radius: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.19);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .fab svg { width: 20px; height: 20px; fill: currentColor; }
+    .fab-call { background: #24241f; }
+    .fab-whatsapp { background: #218653; }
+
+    /* Image modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(0,0,0,.91);
+      display: none;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .lightbox.open { display: grid; }
+
+    .lightbox img {
+      max-width: min(100%, 1000px);
+      max-height: 82vh;
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      color: white;
+      background: transparent;
+      border: 1px solid #777;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 26px;
+    }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s, transform .65s; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* Tablet */
+    @media (max-width: 1000px) {
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: 11px; }
+      .nav-actions .btn { padding: 10px 12px; }
+      .about-grid { gap: 42px; }
+      .promise-grid { grid-template-columns: repeat(3, 1fr); }
+      .promise-intro { grid-column: 1 / -1; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid, .faq-grid { gap: 35px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 760px) {
+      .container { width: calc(100% - 36px); }
+
+      .top-strip-inner { justify-content: center; text-align: center; }
+      .top-strip-inner > span:last-child { display: none; }
+
+      .nav { min-height: 70px; }
+      .brand-mark { width: 39px; height: 39px; }
+      .brand-name { font-size: 13px; letter-spacing: 1px; }
+      .brand-sub { font-size: 8px; }
+
+      .menu-toggle { display: block; }
+
+      .nav-actions > .btn { display: none; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        right: 0;
+        padding: 15px 18px 22px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 15px 25px rgba(0,0,0,.07);
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open { display: grid; }
+
+      .nav-links li a {
+        display: flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 8px 4px;
+        font-size: 13px;
+        border-bottom: 1px solid #eeeae0;
+      }
+
+      .hero { min-height: 650px; }
+      .hero::before { background-position: 58% center; }
+      .hero::after {
+        background: linear-gradient(90deg, rgba(20,20,17,.85), rgba(20,20,17,.45)),
+                    linear-gradient(0deg, rgba(20,20,17,.4), transparent);
+      }
+
+      .hero-content { padding: 80px 0 70px; }
+      .hero h1 { font-size: clamp(45px, 11vw, 67px); letter-spacing: -1.5px; }
+      .hero-description { font-size: 14px; }
+      .hero-proof { gap: 17px; margin-top: 40px; }
+      .proof-item strong { font-size: 21px; }
+      .proof-item span { font-size: 10px; }
+      .hero-actions .btn { flex: 1 1 160px; }
+
+      .trust-inner { grid-template-columns: repeat(2, 1fr); }
+      .trust-item { padding: 19px 8px; border-bottom: 1px solid var(--line); }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .trust-item:nth-child(3), .trust-item:nth-child(4) { border-bottom: 0; }
+
+      .about, .portfolio, .reviews { padding: 75px 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 38px; }
+      .about-visual { padding-right: 16px; }
+      .about-visual > img { height: 390px; }
+      .about-note { padding: 19px; width: 195px; }
+      .about-note strong { font-size: 22px; }
+
+      .section-top { align-items: flex-start; flex-direction: column; margin-bottom: 27px; gap: 10px; }
+      .section-heading { font-size: clamp(33px, 8vw, 43px); }
+      .section-copy { font-size: 13px; }
+
+      .services { padding: 75px 0; }
+      .services-grid { grid-template-columns: 1fr; gap: 18px; }
+      .service-image { height: 250px; }
+      .service-content { padding: 22px; }
+      .service-content h3 { font-size: 24px; }
+
+      .promise { padding: 65px 0; }
+      .promise-grid { grid-template-columns: 1fr; gap: 28px; }
+      .promise-intro { grid-column: auto; }
+      .promise-card { padding: 0 0 0 18px; }
+
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .gallery-item { height: 230px; }
+      .gallery-caption { bottom: 13px; left: 12px; }
+      .gallery-caption strong { font-size: 18px; }
+      .gallery-caption small { font-size: 8px; letter-spacing: 1px; }
+
+      .finishes { padding: 70px 0; }
+      .finish-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; }
+      .finish-card:last-child { grid-column: 1 / -1; max-width: calc(50% - 7px); }
+      .finish-card h3 { font-size: 16px; }
+
+      .reviews-grid { grid-template-columns: 1fr; }
+      .review-card { padding: 24px; }
+
+      .cta { padding: 10px 0 75px; }
+      .cta-panel { padding: 42px 25px; flex-direction: column; align-items: flex-start; }
+      .cta-panel::after { right: -40px; font-size: 300px; }
+      .cta-actions { width: 100%; }
+      .cta-actions .btn { flex: 1 1 160px; }
+
+      .contact { padding-bottom: 75px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+      .contact-form { padding: 23px 18px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+
+      .faq { padding: 75px 0; }
+      .faq-grid { grid-template-columns: 1fr; gap: 20px; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 35px 22px; }
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+      .footer { padding-top: 50px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+
+      .floating-actions { right: 12px; bottom: 14px; gap: 8px; }
+      .fab { min-height: 47px; padding: 0 14px; }
+    }
+
+    @media (max-width: 370px) {
+      .container { width: calc(100% - 28px); }
+      .brand-name { font-size: 11px; }
+      .brand-mark { width: 35px; height: 35px; }
+      .gallery-item { height: 190px; }
+      .gallery-caption strong { font-size: 16px; }
+      .hero h1 { font-size: 43px; }
+      .fab { padding: 0 11px; font-size: 11px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <span>TRANSFORMING WALLS. ELEVATING SPACES.</span>
+      <span>Speak with us: <a href="tel:+919727232427">+91 97272 32427</a></span>
+    </div>
+  </div>
+
+  <header class="header">
+    <nav class="container nav" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Mustak Painters home">
+        <span class="brand-mark">M</span>
+        <span class="brand-text">
+          <span class="brand-name">MUSTAK PAINTERS</span>
+          <span class="brand-sub">COLOURS & CRAFTSMANSHIP</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Our Projects</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-dark" href="#contact">Get a Free Estimate ↗</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">A BETTER FINISH. A BETTER FEEL.</span>
+          <h1>Walls that speak.<br><em>Spaces that inspire.</em></h1>
+          <p class="hero-description">
+            From elegant interior colours to striking exterior finishes,
+            we bring your vision to life with thoughtful design, beautiful
+            textures and attention to every detail.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-gold">Explore Our Work ↗</a>
+            <a href="https://wa.me/919727232427?text=Hello%20Mustak%20Painters%2C%20I%20would%20like%20a%20painting%20estimate." class="btn btn-light" target="_blank" rel="noopener">WhatsApp Us ↗</a>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-item">
+              <strong>01.</strong>
+              <span>Thoughtful Finishes</span>
+            </div>
+            <div class="proof-item">
+              <strong>02.</strong>
+              <span>Personalised Colours</span>
+            </div>
+            <div class="proof-item">
+              <strong>03.</strong>
+              <span>Detail-Focused Work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-bar" aria-label="Our service commitments">
+      <div class="container trust-inner">
+        <div class="trust-item"><strong>Interior</strong><span>Beautiful spaces inside</span></div>
+        <div class="trust-item"><strong>Exterior</strong><span>Finishes made to impress</span></div>
+        <div class="trust-item"><strong>Textures</strong><span>Character on every wall</span></div>
+        <div class="trust-item"><strong>Wallpapers</strong><span>Style in every detail</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+            alt="Tastefully finished modern interior with warm neutral colours"
+            loading="lazy"
+            decoding="async">
+          <div class="about-note">
+            <strong>Every wall has a story.</strong>
+            <span>Let's create yours together.</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="eyebrow">THE MUSTAK DIFFERENCE</span>
+          <h2 class="section-heading">More than paint.<br>A feeling of home.</h2>
+          <p>
+            At Mustak Painters, we believe the right colours and finishes
+            can completely change the way a space feels. Whether you are
+            refreshing a single room or transforming an entire property,
+            our goal is to help you achieve a finish that feels right for you.
+          </p>
+          <p>
+            From clean, contemporary walls to expressive textures and
+            decorative wallpapers, we help bring your ideas together with
+            a considered approach to colour, finish and detail.
+          </p>
+
+          <ul class="check-list">
+            <li><span class="check">✓</span>Interior and exterior painting solutions</li>
+            <li><span class="check">✓</span>Decorative textures and wall treatments</li>
+            <li><span class="check">✓</span>Wall panels and wallpaper styling</li>
+            <li><span class="check">✓</span>Colour choices tailored to your space</li>
+          </ul>
+
+          <a class="btn btn-dark" href="#contact">Let's Discuss Your Project ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">WHAT WE DO</span>
+            <h2 class="section-heading">Finishes for every vision.</h2>
+            <p class="section-copy">
+              Explore painting and wall styling options designed to bring
+              personality, warmth and character to your property.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-outline">Enquire About Services ↗</a>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=850&q=80" alt="Elegant interior painting and neutral wall colours" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">01 / INTERIOR</span>
+              <h3>Interior Painting</h3>
+              <p>Refresh bedrooms, living rooms and complete interiors with colours that complement your furniture, lighting and style.</p>
+              <a class="text-link enquiry-link" href="#contact" data-service="Interior Painting">Discuss this service <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=850&q=80" alt="Contemporary building exterior and architectural finishes" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">02 / EXTERIOR</span>
+              <h3>Exterior Painting</h3>
+              <p>Give your property's exterior a fresh, coordinated appearance with suitable finishes for the surface and environment.</p>
+              <a class="text-link enquiry-link" href="#contact" data-service="Exterior Painting">Discuss this service <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=850&q=80" alt="Decorative interior wall and textured finish" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">03 / TEXTURES</span>
+              <h3>Texture Finishes</h3>
+              <p>Add depth and visual interest with decorative wall finishes, feature walls and distinctive surface treatments.</p>
+              <a class="text-link enquiry-link" href="#contact" data-service="Texture Finishes">Discuss this service <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=850&q=80" alt="Premium wallpaper and carefully styled interior" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">04 / WALLPAPER</span>
+              <h3>Wallpaper Styling</h3>
+              <p>Explore statement patterns and understated designs that help create a distinctive atmosphere in your room.</p>
+              <a class="text-link enquiry-link" href="#contact" data-service="Wallpaper Styling">Discuss this service <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=850&q=80" alt="Modern living space with decorative wall panels" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">05 / WALL PANELS</span>
+              <h3>Wall Panels</h3>
+              <p>Bring structure and sophistication to feature walls with decorative panelling and coordinated design details.</p>
+              <a class="text-link enquiry-link" href="#contact" data-service="Wall Panels">Discuss this service <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=850&q=80" alt="Refined contemporary home interior with coordinated finishes" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">06 / COLOUR</span>
+              <h3>Colour Consultation</h3>
+              <p>Find combinations that work with your space, natural light, furniture and the mood you want to create.</p>
+              <a class="text-link enquiry-link" href="#contact" data-service="Colour Consultation">Discuss this service <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="promise">
+      <div class="container promise-grid">
+        <div class="promise-intro">
+          <span class="eyebrow">A THOUGHTFUL APPROACH</span>
+          <h2>Good work is in<br>the details.</h2>
+          <p>We focus on the finish, the process and the experience.</p>
+        </div>
+        <div class="promise-card">
+          <span class="symbol">01</span>
+          <h3>Prepared Surfaces</h3>
+          <p>Proper preparation helps create a cleaner, more consistent result.</p>
+        </div>
+        <div class="promise-card">
+          <span class="symbol">02</span>
+          <h3>Colour & Detail</h3>
+          <p>Thoughtful colour choices and attention to edges, corners and finish.</p>
+        </div>
+        <div class="promise-card">
+          <span class="symbol">03</span>
+          <h3>Clear Communication</h3>
+          <p>Discuss your requirements, timeline and estimate before work begins.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT GALLERY -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">DESIGN INSPIRATION</span>
+            <h2 class="section-heading">A world of finishes.</h2>
+            <p class="section-copy">
+              Explore a selection of interior styles and finishes to help
+              you discover the look that feels right for your space.
+            </p>
+          </div>
+          <a class="btn btn-dark" href="#contact">Plan Your Project ↗</a>
+        </div>
+
+        <div class="portfolio-filters" role="group" aria-label="Filter gallery">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Inspiration</button>
+          <button class="filter-btn" data-filter="interior" aria-pressed="false">Interior</button>
+          <button class="filter-btn" data-filter="texture" aria-pressed="false">Textures</button>
+          <button class="filter-btn" data-filter="exterior" aria-pressed="false">Exterior</button>
+          <button class="filter-btn" data-filter="wallpaper" aria-pressed="false">Wall Styling</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <button class="gallery-item" data-category="interior" aria-label="View neutral living room inspiration">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Neutral contemporary living room" loading="lazy" decoding="async">
+            <span class="gallery-caption"><small>INTERIOR</small><strong>Quiet Luxury</strong></span>
+          </button>
+          <button class="gallery-item" data-category="texture" aria-label="View decorative texture inspiration">
+            <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80" alt="Textural modern home decor" loading="lazy" decoding="async">
+            <span class="gallery-caption"><small>TEXTURES</small><strong>Tactile Beauty</strong></span>
+          </button>
+          <button class="gallery-item" data-category="wallpaper" aria-label="View wall styling inspiration">
+            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=80" alt="Designer interior with decorative wall styling" loading="lazy" decoding="async">
+            <span class="gallery-caption"><small>WALL STYLING</small><strong>Modern Character</strong></span>
+          </button>
+          <button class="gallery-item" data-category="interior" aria-label="View bedroom colour inspiration">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Warm contemporary bedroom and wall colours" loading="lazy" decoding="async">
+            <span class="gallery-caption"><small>INTERIOR</small><strong>Warm Neutrals</strong></span>
+          </button>
+          <button class="gallery-item" data-category="exterior" aria-label="View architectural exterior inspiration">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern architecture and exterior design" loading="lazy" decoding="async">
+            <span class="gallery-caption"><small>EXTERIOR</small><strong>Architectural Calm</strong></span>
+          </button>
+          <button class="gallery-item" data-category="wallpaper" aria-label="View statement interior inspiration">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Carefully coordinated decorative interior" loading="lazy" decoding="async">
+            <span class="gallery-caption"><small>WALL STYLING</small><strong>Statement Spaces</strong></span>
+          </button>
+        </div>
+
+        <p class="gallery-note">
+          Note: These photographs are design inspiration, not verified Mustak Painters projects. Replace them with your own completed-work photographs before publishing.
+        </p>
+      </div>
+    </section>
+
+    <!-- FINISH IDEAS -->
+    <section class="finishes">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">FIND YOUR FINISH</span>
+            <h2 class="section-heading">Details make the difference.</h2>
+            <p class="section-copy">Different surfaces and styles can create very different moods. Tell us what you have in mind.</p>
+          </div>
+        </div>
+
+        <div class="finish-grid">
+          <article class="finish-card">
+            <img class="finish-swatch" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=450&q=75" alt="Subtle neutral interior finish" loading="lazy" decoding="async">
+            <h3>Soft & Minimal</h3><p>Understated, calming colours</p>
+          </article>
+          <article class="finish-card">
+            <img class="finish-swatch" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=450&q=75" alt="Rich warm interior tones" loading="lazy" decoding="async">
+            <h3>Warm & Natural</h3><p>Comforting earthy shades</p>
+          </article>
+          <article class="finish-card">
+            <img class="finish-swatch" src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=450&q=75" alt="Decorative room styling" loading="lazy" decoding="async">
+            <h3>Modern Texture</h3><p>Depth and visual interest</p>
+          </article>
+          <article class="finish-card">
+            <img class="finish-swatch" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=450&q=75" alt="Elegant modern interior" loading="lazy" decoding="async">
+            <h3>Elegant & Refined</h3><p>Coordinated finishes</p>
+          </article>
+          <article class="finish-card">
+            <img class="finish-swatch" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=450&q=75" alt="Contemporary wall and furniture styling" loading="lazy" decoding="async">
+            <h3>Statement Walls</h3><p>A distinctive focal point</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">CUSTOMER EXPERIENCE</span>
+            <h2 class="section-heading">Trust is in the finish.</h2>
+            <p class="section-copy">
+              A great experience starts with listening to your requirements
+              and understanding the space you want to transform.
+            </p>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="Decorative stars">★★★★★</div>
+            <blockquote>“Share your experience here and help future customers understand what working with Mustak Painters is like.”</blockquote>
+            <div class="review-author">
+              <div class="review-avatar">01</div>
+              <div><strong>Customer Review</strong><span>Replace with verified feedback</span></div>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="Decorative stars">★★★★★</div>
+            <blockquote>“Add a genuine review about the painting finish, communication, and overall customer experience.”</blockquote>
+            <div class="review-author">
+              <div class="review-avatar">02</div>
+              <div><strong>Customer Review</strong><span>Replace with verified feedback</span></div>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="Decorative stars">★★★★★</div>
+            <blockquote>“Use real customer feedback to show how the completed work met the customer's expectations.”</blockquote>
+            <div class="review-author">
+              <div class="review-avatar">03</div>
+              <div><strong>Customer Review</strong><span>Replace with verified feedback</span></div>
+            </div>
+          </article>
+        </div>
+
+        <p class="review-disclaimer">The review cards above are placeholders, not actual customer testimonials. Replace them with permissioned, genuine reviews before launch.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <span class="eyebrow">YOUR SPACE, YOUR STYLE</span>
+            <h2>Ready to give your walls a new life?</h2>
+            <p>Tell us about your space, your ideas and the finish you have in mind. Let's discuss your project.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-gold" href="#contact">Request an Estimate ↗</a>
+            <a class="btn btn-light" href="https://wa.me/919727232427?text=Hello%20Mustak%20Painters%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">LET'S CONNECT</span>
+          <h2 class="section-heading">Let's talk about your space.</h2>
+          <p class="section-copy">
+            Have a room to refresh or a complete property to transform?
+            Send us your requirements and start a conversation.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-row">
+              <div class="contact-icon" aria-hidden="true">☎</div>
+              <div><strong>Call Us</strong><a href="tel:+919727232427">+91 97272 32427</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon" aria-hidden="true">◉</div>
+              <div><strong>WhatsApp</strong><a href="https://wa.me/919727232427" target="_blank" rel="noopener">Chat directly with Mustak Painters</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon" aria-hidden="true">✉</div>
+              <div><strong>Email</strong><a href="mailto:mustaqpainter@gmail.com">mustaqpainter@gmail.com</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon" aria-hidden="true">▶</div>
+              <div><strong>YouTube</strong><a href="https://www.youtube.com/@mustak_painters" target="_blank" rel="noopener">Watch our videos and updates ↗</a></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3>Tell us about your project.</h3>
+          <p>Complete the form and continue directly to WhatsApp to send your enquiry.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="customerName">Your Name *</label>
+              <input id="customerName" name="name" type="text" placeholder="Enter your name" autocomplete="name" required maxlength="100">
+            </div>
+            <div class="field">
+              <label for="customerPhone">Phone Number *</label>
+              <input id="customerPhone" name="phone" type="tel" placeholder="Your contact number" autocomplete="tel" inputmode="tel" required maxlength="20">
+            </div>
+            <div class="field">
+              <label for="serviceSelect">Service Required *</label>
+              <select id="serviceSelect" name="service" required>
+                <option value="">Select a service</option>
+                <option>Interior Painting</option>
+                <option>Exterior Painting</option>
+                <option>Texture Finishes</option>
+                <option>Wallpaper Styling</option>
+                <option>Wall Panels</option>
+                <option>Colour Consultation</option>
+                <option>Multiple Services</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="propertyType">Property Type</label>
+              <select id="propertyType" name="property">
+                <option value="Home">Home / Apartment</option>
+                <option value="Villa">Villa / Bungalow</option>
+                <option value="Office">Office / Commercial</option>
+                <option value="Shop">Shop / Showroom</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="projectDetails">Project Details</label>
+              <textarea id="projectDetails" name="details" placeholder="Tell us about the area, preferred colours, location or timeline..." maxlength="1500"></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-dark" type="submit">Send Enquiry on WhatsApp ↗</button>
+          <p class="form-note">Your enquiry opens in WhatsApp. No form information is stored by this static website.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">GOOD TO KNOW</span>
+          <h2 class="section-heading">A few helpful answers.</h2>
+          <p class="section-copy">Have a different question? Contact us and tell us what you need.</p>
+          <a class="btn btn-outline" href="https://wa.me/919727232427?text=Hello%20Mustak%20Painters%2C%20I%20have%20a%20question." target="_blank" rel="noopener" style="margin-top:24px">Ask a Question ↗</a>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>What painting services do you offer?</span><span>+</span></button>
+            <div class="faq-answer">Mustak Painters offers interior and exterior painting, decorative textures, wallpapers, wall panels and colour-related services. Contact us to discuss your specific requirements.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How can I get a project estimate?</span><span>+</span></button>
+            <div class="faq-answer">Call or WhatsApp us with your location, approximate area and required service. The final estimate depends on the surface condition, materials, finish and scope of work.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Can I choose custom colours and textures?</span><span>+</span></button>
+            <div class="faq-answer">Yes, you can discuss your preferred colours, wall finishes, patterns and style. Share reference photographs to help communicate your vision.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>How long does a painting project take?</span><span>+</span></button>
+            <div class="faq-answer">The timeline depends on the size of the area, surface preparation, selected finish, drying time and project conditions. We can discuss an estimated schedule after understanding your requirements.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false"><span>Do you provide wallpaper and wall panel services?</span><span>+</span></button>
+            <div class="faq-answer">Wallpaper styling and wall panels are among the services listed for Mustak Painters. Contact us to confirm available options, materials and installation details.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#home" class="brand">
+            <span class="brand-mark">M</span>
+            <span class="brand-text">
+              <span class="brand-name">MUSTAK PAINTERS</span>
+              <span class="brand-sub">COLOURS & CRAFTSMANSHIP</span>
+            </span>
+          </a>
+          <p>Thoughtful colours, distinctive textures and beautifully finished spaces. Let's bring your next idea to life.</p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#portfolio">Design Inspiration</a></li>
+            <li><a href="#reviews">Customer Experience</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Our Services</h3>
+          <ul class="footer-links">
+            <li><a href="#services">Interior Painting</a></li>
+            <li><a href="#services">Exterior Painting</a></li>
+            <li><a href="#services">Texture Finishes</a></li>
+            <li><a href="#services">Wallpaper & Panels</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Get in Touch</h3>
+          <ul class="footer-links">
+            <li><a href="tel:+919727232427">+91 97272 32427</a></li>
+            <li><a href="mailto:mustaqpainter@gmail.com">mustaqpainter@gmail.com</a></li>
+            <li><a href="https://wa.me/919727232427" target="_blank" rel="noopener">WhatsApp ↗</a></li>
+            <li><a href="https://www.youtube.com/@mustak_painters" target="_blank" rel="noopener">YouTube ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Mustak Painters. All rights reserved.</span>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating call + WhatsApp -->
+  <div class="floating-actions" aria-label="Quick contact">
+    <a class="fab fab-call" href="tel:+919727232427" aria-label="Call Mustak Painters">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.56 3.58.56a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.19 2.46.56 3.58a1 1 0 01-.25 1.01l-2.19 2.2z"/></svg>
+      <span>Call Now</span>
+    </a>
+    <a class="fab fab-whatsapp" href="https://wa.me/919727232427?text=Hello%20Mustak%20Painters%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0012.07 0C5.5 0 .15 5.35.15 11.92c0 2.1.55 4.16 1.6 5.98L.05 24l6.25-1.64a11.94 11.94 0 005.76 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.47-8.43zM12.07 21.8a9.88 9.88 0 01-5.03-1.37l-.36-.22-3.71.97.99-3.62-.24-.37a9.87 9.87 0 01-1.52-5.27c0-5.46 4.44-9.9 9.9-9.9a9.82 9.82 0 017 2.9 9.82 9.82 0 012.9 7c0 5.46-4.44 9.9-9.9 9.9zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.67-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.08 4.5.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Gallery lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">×</button>
+    <img id="lightboxImage" src="" alt="Expanded design inspiration">
+  </div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const $ = (selector, parent = document) => parent.querySelector(selector);
+      const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
+
+      // Automatically update the copyright year.
+      $("#year").textContent = new Date().getFullYear();
+
+      // Mobile navigation.
+      const menuToggle = $("#menuToggle");
+      const navLinks = $("#navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+        menuToggle.textContent = isOpen ? "×" : "☰";
+      });
+
+      $$("#navLinks a").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+          menuToggle.textContent = "☰";
+        });
+      });
+
+      // Portfolio filters.
+      const filterButtons = $$(".filter-btn");
+      const galleryItems = $$(".gallery-item");
+
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter;
+
+          filterButtons.forEach(item => {
+            const active = item === button;
+            item.classList.toggle("active", active);
+            item.setAttribute("aria-pressed", String(active));
+          });
+
+          galleryItems.forEach(item => {
+            item.hidden = filter !== "all" && item.dataset.category !== filter;
+          });
+        });
+      });
+
+      // Gallery image lightbox.
+      const lightbox = $("#lightbox");
+      const lightboxImage = $("#lightboxImage");
+      const lightboxClose = $("#lightboxClose");
+      let previousFocus = null;
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+        lightboxImage.src = "";
+        if (previousFocus) previousFocus.focus();
+      }
+
+      galleryItems.forEach(item => {
+        item.addEventListener("click", () => {
+          const image = $("img", item);
+          if (!image) return;
+
+          previousFocus = item;
+          lightboxImage.src = image.currentSrc || image.src;
+          lightboxImage.alt = image.alt;
+          lightbox.classList.add("open");
+          document.body.style.overflow = "hidden";
+          lightboxClose.focus();
+        });
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && lightbox.classList.contains("open")) {
+          closeLightbox();
+        }
+      });
+
+      // FAQ accordions.
+      $$(".faq-question").forEach(button => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".faq-item");
+          const isOpen = item.classList.toggle("open");
+          button.setAttribute("aria-expanded", String(isOpen));
+        });
+      });
+
+      // Prefill the enquiry service when a service link is selected.
+      $$(".enquiry-link").forEach(link => {
+        link.addEventListener("click", () => {
+          const service = link.dataset.service;
+          const select = $("#serviceSelect");
+          const matchingOption = [...select.options].find(option => option.value === service);
+          if (matchingOption) select.value = service;
+        });
+      });
+
+      // Send form details to WhatsApp; no database or backend is required.
+      $("#contactForm").addEventListener("submit", event => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        if (!form.reportValidity()) return;
+
+        const name = $("#customerName").value.trim();
+        const phone = $("#customerPhone").value.trim();
+        const service = $("#serviceSelect").value;
+        const property = $("#propertyType").value;
+        const details = $("#projectDetails").value.trim();
+
+        const digits = phone.replace(/\D/g, "");
+        if (digits.length < 7 || digits.length > 15) {
+          $("#customerPhone").setCustomValidity("Please enter a valid phone number.");
+          $("#customerPhone").reportValidity();
+          $("#customerPhone").setCustomValidity("");
+          return;
+        }
+
+        const message = [
+          "Hello Mustak Painters! I'd like to enquire about a project.",
+          "",
+          "Name: " + name,
+          "My phone: " + phone,
+          "Service: " + service,
+          "Property type: " + property,
+          "Project details: " + (details || "Not provided"),
+          "",
+          "Please contact me to discuss the estimate."
+        ].join("\n");
+
+        const url = "https://wa.me/919727232427?text=" + encodeURIComponent(message);
+        const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+
+        // Fallback if the browser blocks a new tab.
+        if (!newWindow) window.location.href = url;
+      });
+
+      // Lightweight scroll reveal. Content remains visible if unsupported.
+      const revealItems = $$(".reveal");
+
+      if ("IntersectionObserver" in window &&
+          !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach(item => observer.observe(item));
+      } else {
+        revealItems.forEach(item => item.classList.add("visible"));
+      }
+    })();
+  </script>
+</body>
+</html>
